@@ -32,6 +32,7 @@ public class AndroidDemoTest {
     	        dc.setCapability("reportFormat", reportFormat);
     	        dc.setCapability("testName", testName);
     	        dc.setCapability(MobileCapabilityType.UDID, "ZY223B99TK");
+    	        dc.setCapability("testobjectApiKey", "FAED11E078BB400FAC2E6123F6FD89AF");
     	        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.example.circleci.circlecidemo2");
     	        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
     	        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
