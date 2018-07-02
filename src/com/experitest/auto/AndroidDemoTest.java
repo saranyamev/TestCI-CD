@@ -31,9 +31,7 @@ public class AndroidDemoTest {
     	        dc.setCapability("reportDirectory", reportDirectory);
     	        dc.setCapability("reportFormat", reportFormat);
     	        dc.setCapability("testName", testName);
-    	        dc.setCapability("platformName", "Android");
-    	        dc.setCapability("deviceName", "Samsung Galaxy S4 Emulator");
-    	        dc.setCapability("platformVersion", "4.4");;
+    	        dc.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
     	        dc.setCapability("testobjectApiKey", "FAED11E078BB400FAC2E6123F6FD89AF");
     	        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.example.circleci.circlecidemo2");
     	        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
@@ -43,10 +41,11 @@ public class AndroidDemoTest {
 
     @Test
     public void testUntitled() {
-        new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@class='android.widget.TextView']")));
+        //new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@class='android.widget.TextView']")));
         driver.findElement(By.xpath("//*[@id='smallLabel']")).click();
         new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Home']")));
-        driver.findElement(By.xpath("//*[@text='Notifications']")).getAttribute("value");
+      
+        //driver.findElement(By.xpath("//*[@text='Notifications']")).getAttribute("value");
         driver.findElement(By.xpath("//*[@text='Notifications']")).click();
         new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Notifications']")));
     }
