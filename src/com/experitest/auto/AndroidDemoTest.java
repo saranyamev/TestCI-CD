@@ -31,7 +31,9 @@ public class AndroidDemoTest {
     	        dc.setCapability("reportDirectory", reportDirectory);
     	        dc.setCapability("reportFormat", reportFormat);
     	        dc.setCapability("testName", testName);
-    	        dc.setCapability(MobileCapabilityType.UDID, "ZY223B99TK");
+    	        dc.setCapability("platformName", "Android");
+    	        dc.setCapability("deviceName", "Samsung Galaxy S4 Emulator");
+    	        dc.setCapability("platformVersion", "4.4");;
     	        dc.setCapability("testobjectApiKey", "FAED11E078BB400FAC2E6123F6FD89AF");
     	        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.example.circleci.circlecidemo2");
     	        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
