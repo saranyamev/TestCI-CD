@@ -19,6 +19,10 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class AndroidDemoTest {
+	  public static final String USERNAME = "YOUR_USERNAME";
+	  public static final String ACCESS_KEY = "YOUR_ACCESS_KEY";
+	  public static final String URL = "https://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:443/wd/hub";
+	 
     private String reportDirectory = "reports";
     private String reportFormat = "xml";
     private String testName = "Untitled";
@@ -35,7 +39,7 @@ public class AndroidDemoTest {
     	        dc.setCapability("testobjectApiKey", "FAED11E078BB400FAC2E6123F6FD89AF");
     	        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.example.circleci.circlecidemo2");
     	        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
-    	        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
+    	        //driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
     	        driver.setLogLevel(Level.INFO);
     }
 
