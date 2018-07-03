@@ -23,18 +23,20 @@ public class AndroidTest1 {
     DesiredCapabilities dc = new DesiredCapabilities();
     
     @BeforeMethod
-    public void setUp() throws MalformedURLException {
-        dc.setCapability("reportDirectory", reportDirectory);
-        dc.setCapability("reportFormat", reportFormat);
-        dc.setCapability("testName", testName);
-        dc.setCapability("accessKey", accessKey);
-        dc.setCapability(MobileCapabilityType.UDID, "0117114300883901");
-        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
-        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
-        dc.setCapability("instrumentApp", true);
-        driver = new AndroidDriver<>(new URL("https://demo.experitest.com:443/wd/hub"), dc);
-        driver.setLogLevel(Level.INFO);
-    }
+    	 public void setUp() throws MalformedURLException {
+    	        dc.setCapability("reportDirectory", reportDirectory);
+    	        dc.setCapability("reportFormat", reportFormat);
+    	        dc.setCapability("testName", testName);
+    	        dc.setCapability("accessKey", accessKey);
+    	        dc.setCapability(MobileCapabilityType.UDID, "0117114300883901");
+    	        dc.setCapability(MobileCapabilityType.APP, "cloud:com.example.circleci.circlecidemo2/.MainActivity");
+    	        dc.setCapability("appVersion", "1.0_28_masterbranch");
+    	        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.example.circleci.circlecidemo2");
+    	        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
+    	        dc.setCapability("instrumentApp", true);
+    	        driver = new AndroidDriver<>(new URL("https://demo.experitest.com:443/wd/hub"), dc);
+    	        driver.setLogLevel(Level.INFO);
+    	    }
 
 
     public void testUntitled() {
