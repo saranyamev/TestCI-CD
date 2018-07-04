@@ -38,7 +38,7 @@ public class AndroidTest1 {
     	        driver.setLogLevel(Level.INFO);
     	    }
 
-
+@Test
     public void testUntitled() {
         driver.findElement(By.xpath("//*[@text='Dashboard']")).click();
         // driver.pressKeyCode(AndroidKeyCode.HOME);
